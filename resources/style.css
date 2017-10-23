@@ -30,7 +30,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
     line-height: 1.5;
-    font-family:open_sansregular;
+    font-family: 'Gentium Book' serif;
     background:#352D20;
 }
 ol, ul {
@@ -126,7 +126,7 @@ header {
 .languages {
     float:left;
     margin-right:25px;
-    margin-top:34px;
+    margin-top:15px;
 }
 
 .languages ul li {
@@ -145,11 +145,6 @@ header {
 
 
 .languages a {
-    font-size:11px;
-    color:#fff;
-    font-family:open_sansbold;
-    line-height:11px;
-    border-right:1px solid #fff;
     padding-right:7px;
 }
 
@@ -186,7 +181,7 @@ nav {
 
 .menu ul li a {
     color:#fff;
-    font-family:open_sansbold;
+    font-family: 'Open Sans', sans-serif;
     font-size:40px;
     width: 100%;
     display: block;
@@ -226,6 +221,7 @@ nav {
     width:364px;
     height:147px;
     margin-left:56px;
+    margin-top: 15px;
 }
 
 .slide {
@@ -321,24 +317,20 @@ nav {
 
 
 #next {
-    color:#fff;
-    font-size:11px;
-    font-family:open_sansbold;
-    text-indent:2px;
-    text-transform:uppercase;
-    background:url(../img/arrow-down.png) no-repeat;
-    background-position:9px 30px;
     height:65px;
     width:35px;
     display:block;
     margin:0 auto;
     position: fixed;
     bottom: 29px;
-    left: -9px;
+    left: 0px;
     right: 0;
     z-index:87;
 }
-
+.seal{
+    text-align: right;
+    padding-right: 40px;
+}
 .to-top {
     background:url(../img/arrow-up.png) no-repeat !important;
     background-position:9px 30px !important;
@@ -350,32 +342,25 @@ nav {
     border-left: 1px solid #CCC;
 }
 
-.bold-brown {
-    color:#a1938a;
-    font-size:30px;
-    text-transform:uppercase;
-    font-family:open_sansbold;
+.bold-blue {
+    color:#4d515f;
+    font-size:24px;
+    font-family: 'Gentium Book Basic', serif;
     float:left;
+    font-weight: 700;
     line-height:24px;
-}
-
-.light-brown {
-    clear:both;
-    color:#a1938a;
-    font-family:open_sanslight;
-    font-size:30px;
-    float:left;
+    margin-top: 10px;
 }
 
 .bold-white {
     float:left;
     font-size:40px;
-    font-family:open_sansbold;
-    text-transform:uppercase;
+    line-height: 40px;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .bold-white-small {
-    font-family:open_sansbold;
+    font-family: 'Open Sans', sans-serif;
     font-size:20px;
     float:left;
     text-transform:uppercase;
@@ -385,7 +370,7 @@ nav {
 
 .bold-white-xsmall {
     font-size:14px;
-    font-family:open_sansbold;
+    font-family: 'Open Sans', sans-serif;
     margin-top:15px;
 }
 
@@ -430,7 +415,7 @@ nav {
 
 #slide-2 ul li {
     font-size:20px;
-    font-family:open_sansbold;
+    font-family: 'Open Sans', sans-serif;
     text-transform:uppercase;
     background:url(../img/list-check-w-line.png) no-repeat;
     background-position:-1px -0px;
@@ -492,7 +477,7 @@ nav {
     width:324px;
     height:324px;
     text-align:center;
-    font-family:open_sanslight;
+    font-family: 'Open Sans', sans-serif;
     font-size:27px;
     line-height:38px;
     text-transform:uppercase;
@@ -585,7 +570,7 @@ nav {
     margin-top:5px;
     text-transform: uppercase;
     font-size:14px;
-    font-family: open_sansbold;
+    font-family: 'Open Sans', sans-serif;
     text-align: center;
     padding-bottom:15px;
     margin-bottom:7px;
@@ -734,7 +719,7 @@ nav {
 }
 
 .advoc-name {
-    font-family: open_sansbold;
+    font-family: 'Open Sans', sans-serif;
     font-size:16px;
     color:#fff;
     text-transform: uppercase;
@@ -742,7 +727,7 @@ nav {
 
 .description p {
     color:#fff;
-    font-family: open_sansregular;
+    font-family: 'Gentium Book Basic', serif;
     font-size:14px;
 }
 
@@ -839,7 +824,7 @@ nav {
 }
 
 .form label {
-    font-family:open_sansbold;
+    font-family: 'Open Sans', sans-serif;
     text-transform:uppercase;
     color:#fff;
     font-size:14px;
@@ -849,7 +834,7 @@ nav {
     border:1px solid #c7c1be;
     background:none;
     color:#fff;
-    font-family:open_sansregular;
+    font-family: 'Gentium Book Basic', serif;
 }
 
 .form-fields {
@@ -881,7 +866,7 @@ nav {
 .security, .code {
     float:left;
     font-size:14px;
-    font-family:open_sansbold;
+    font-family: 'Open Sans', sans-serif;
     text-transform:uppercase;
 }
 
@@ -1083,7 +1068,7 @@ nav {
         width:162px !important;
         height:162px !important;
         text-align:center;
-        font-family:open_sanslight;
+        font-family: 'Gentium Book Basic', serif;
         font-size:13px !important;
         line-height:22px !important;
         text-transform:uppercase;
