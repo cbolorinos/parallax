@@ -1,0 +1,185 @@
+$(document).ready(function () {
+    $("nav.toggle").click(function () {
+        $("nav.toggle").toggleClass("close");
+        $(".menu").fadeToggle(300);
+    });
+
+
+    $(".menu ul li a").click(function () {
+        $(".menu").fadeOut(300);
+        $("nav.toggle").removeClass("close");
+    });
+
+	$(".cont-close").click(function () {
+        $(".contacts-popup").css('visibility', 'hidden');
+    });
+
+  
+
+	$('.contacts-popup').on('click', function(e) { 
+   if( e.target !== this ) 
+       return;
+    $(".contacts-popup").css('visibility', 'hidden');
+	});
+    
+    //$(".contacts-popup").hide();
+
+    $(".profile").click(function () {
+        //$(".contacts-popup").show();
+        $(".contacts-popup").css('visibility', 'visible');
+    });
+
+    $('.plus').click(function(){
+        $('.plus').css({'-webkit-transform' : 'rotate(-90deg)',
+            '-moz-transform' : 'rotate(-90deg)',
+            '-ms-transform' : 'rotate(-90deg)',
+            'transform' : 'rotate(-90deg)'});
+    });
+});
+
+// $(document).keydown(function (e) {
+//     if (e.keyCode == 27) {
+//         $(".contacts-popup").css('visibility', 'hidden');
+
+//         $(".menu").fadeOut(300);
+//         $("nav.toggle").removeClass("close");
+//         return false;
+//     }
+// });
+
+// $(document).keydown(function(e){
+//     if (e.keyCode == 40 || e.keyCode == 98 ) {
+//         $( '#next' ).click();
+//         return false;
+//     }
+// });
+
+// $(document).keydown(function(e){
+//     if (e.keyCode == 39 || e.keyCode == 102 ) {
+//         $( '.orbit-next' ).click();
+//         return false;
+//     }
+// });
+
+// $(document).keydown(function(e){
+//     if (e.keyCode == 37 || e.keyCode == 100 ) {
+//         $( '.orbit-prev' ).click();
+//         return false;
+//     }
+// });
+
+$(document).keydown(function (e) {
+    if (e.keyCode == 27) {
+        $(".contacts-popup").css('visibility', 'hidden');
+
+        $(".menu").fadeOut(300);
+        $("nav.toggle").removeClass("close");
+        return false;
+    }
+});
+
+$(document).keydown(function(e){
+    if (e.keyCode == 40 ) {
+        $( '#next' ).click();
+        return false;
+    }
+});
+
+$(document).keydown(function(e){
+    if (e.keyCode == 39 ) {
+        $( '.orbit-next' ).click();
+        return false;
+    }
+});
+
+$(document).keydown(function(e){
+    if (e.keyCode == 37 ) {
+        $( '.orbit-prev' ).click();
+        return false;
+    }
+});
+
+
+
+$(window).load(function () {
+
+
+    var $window = $(window);
+
+    $window.scroll(function () {
+        $scroll = $window.scrollTop();
+        if ($scroll < 0) {
+            $scroll = 0;
+
+        }
+
+        if ($scroll > 0) {
+            $('.languages, .line').stop().css('display', 'none');
+        }
+        if ($scroll < 20) {
+            $('.languages, .line').stop().css('display', 'block');
+        }
+    });
+
+    $window.scroll(function () {
+        $scroll = $window.scrollTop();
+        if ($scroll < 0) {
+            $scroll = 0;
+
+        }
+
+        if ($scroll > 4500) {
+            $('#next').stop().addClass('to-top');
+        }
+        if ($scroll < 4500) {
+            $('#next').stop().removeClass('to-top');
+        }
+    });
+});
+
+$(document).ready(function () {
+
+    /*  run scroll to section only
+     if body has class page-scroller */
+    var pageScroller = $('body').hasClass('page-scroller');
+    if (pageScroller) {
+
+        // begin homepage scroll to section
+        var $scrollSection = $('.scroll');
+        var $scrollTrigger = $('#next');
+        var nextSection = 0;
+
+        $scrollTrigger.on('click', function () {
+            $(this).removeClass('go-to-top');
+
+            // If at last section, scroll back to top on next click:
+            if (nextSection >= $scrollSection.length) {
+                $('html, body').animate({scrollTop: 0}, 700);
+                nextSection = 0;
+                return;
+            }
+
+            // If already scrolled down
+            // to find next section position so you don't go backwards:
+            while ($('body').scrollTop() > $($scrollSection[nextSection]).offset().top) {
+                nextSection++;
+            }
+
+            // If next section is the last, add class to rotate arrow:
+            if (nextSection === ($scrollSection.length - 1)) {
+                $(this).addClass('go-to-top');
+            }
+
+            // Move to next section and increment counter check:
+            $('html, body').animate({scrollTop: $($scrollSection[nextSection]).offset().top}, 700);
+            nextSection++;
+        });
+        // end homepage scroll to section
+    } else {
+        console.log('page-scroller class was not found in body tag');
+    }//end if else
+
+});
+
+
+   
